@@ -1,10 +1,10 @@
-// Function to compare two strings and check if they are equal or not
+/*// Function to compare two strings and check if they are equal or not
 const assertEqual = function(actual, expected) {
   if (actual !== expected)
     return console.log(`❌ Assertion Failed: "${actual}" !== "${expected}"`);
   else
     return console.log(`🙂 Assertion Passed: "${actual}" === "${expected}"`);
-};
+};*/
 
 // Function to compare two arrays and check if they are equal or not
 const eqArrays = function(arr1, arr2) {
@@ -38,6 +38,6 @@ assertArraysEqual([1, 2, 3], [3, 2, 1]); // => Arrays are NOT equal
 assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => Arrays are equal
 assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => Arrays are NOT equal
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+/*assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true);
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true);*/
