@@ -1,7 +1,7 @@
-// Function to compare two strings/numbers and check if they are equal or not
+// Function to compare two strings or numbers and check if they are equal or not
 const assertEqual = function(actual, expected) {
 
-  let str1Type = typeof(actual);
+  let str1Type = typeof(actual); 
   let str2Type = typeof(expected);
 
   // Using String Concatenation
