@@ -11,9 +11,10 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(inputString) {
   const results = {};
-  const newString = inputString.split(" ").join("");
-  console.log(newString);
-  for (const character of newString) {
+  const newString1 = inputString.split(" ").join("");
+  const newString2 = newString1.toLowerCase();
+  console.log(newString2);
+  for (const character of newString2) {
     //console.log(character);
       if (results[character]) {
         results[character] += 1;
@@ -27,13 +28,13 @@ const countLetters = function(inputString) {
 
 // TEST CODE
 
-let result1 = countLetters("twinkle twinkle little star");
+let result1 = countLetters("Twinkle Twinkle Little Star");
 console.log(result1);
 
  assertEqual(result1["t"], 5); //Pass
  assertEqual(result1["n"], 3); //Fail
  assertEqual(result1["r"], 1); //Pass
 
-result1 = countLetters("lighthouse in the house");
+result1 = countLetters("Lighthouse in the house");
 console.log(result1);
  
