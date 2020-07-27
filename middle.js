@@ -29,5 +29,5 @@ const printMiddle = function (array) {
 };
 
 
-module.exports = printMiddle;
-
+//module.exports = printMiddle;
+module.exports = middle;
