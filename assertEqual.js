@@ -23,7 +23,7 @@ const assertEqual = function(actual, expected) {
 
   // Using String Literals
   if (str1Type !== str2Type) {
-    if (str1Type === 'string')
+      if (str1Type === 'string')
       return console.log(`❌Assertion Failed: "${actual}" !== ${expected}`);
     else if (str2Type === 'string')
       return console.log(`❌Assertion Failed: ${actual} !== "${expected}"`);
@@ -37,10 +37,21 @@ const assertEqual = function(actual, expected) {
     else if (actual !== expected && str1Type === 'number')
       return console.log(`❌Assertion Failed: ${actual} !== ${expected}`);
   }
-  
+
+ /*  // Function to compare two strings and check if they are equal or not
+  const assertEqual = function(actual, expected) {
+    if (actual !== expected)
+      return console.log(`❌Assertion Failed: ${actual} !== ${expected}`);
+    else
+      return console.log(`🙂Assertion Passed: ${actual} === ${expected}`);
+  } */
 };
 
-// TEST CODE for the above functionality
+
+module.exports = assertEqual;
+
+
+/* // TEST CODE for the above functionality
 assertEqual("Lighthouse Labs", "Lighthouse Labs");
 assertEqual("Lighthouse Labs", "lIghthouse Labs");
 assertEqual("Lighthouse Labs", "Bootcamp");
@@ -58,3 +69,4 @@ assertEqual(123, "");
 assertEqual("", "");
 assertEqual("", '');
 assertEqual("",);
+ */
