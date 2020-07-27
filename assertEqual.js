@@ -1,10 +1,13 @@
 // Function to compare two strings or numbers and check if they are equal or not
+
 const assertEqual = function(actual, expected) {
 
   let str1Type = typeof(actual); 
   let str2Type = typeof(expected);
 
-  // Using String Concatenation
+   
+  // Compare two strings/numbers using String Concatenation
+
   /*if (str1Type !== str2Type) {
     if (str1Type === 'string')
       return console.log("❌" + "Assertion Failed: " + '"' + actual + '"' + " !== " + expected);
@@ -21,7 +24,8 @@ const assertEqual = function(actual, expected) {
       return console.log("❌" + "Assertion Failed: " + actual + " !== " + expected);
   }*/
 
-  // Using String Literals
+  // Compare two strings/numbers using String Literals
+
   if (str1Type !== str2Type) {
       if (str1Type === 'string')
       return console.log(`❌Assertion Failed: "${actual}" !== ${expected}`);
@@ -38,35 +42,14 @@ const assertEqual = function(actual, expected) {
       return console.log(`❌Assertion Failed: ${actual} !== ${expected}`);
   }
 
- /*  // Function to compare two strings and check if they are equal or not
-  const assertEqual = function(actual, expected) {
-    if (actual !== expected)
-      return console.log(`❌Assertion Failed: ${actual} !== ${expected}`);
-    else
-      return console.log(`🙂Assertion Passed: ${actual} === ${expected}`);
-  } */
+  // Compare two arrays
+  
+  if (actual !== expected)
+    return console.log(`❌Assertion Failed: "${actual}" !== "${expected}"`);
+  else
+    return console.log(`🙂Assertion Passed: "${actual}" === "${expected}"`);
+  
 };
 
 
 module.exports = assertEqual;
-
-
-/* // TEST CODE for the above functionality
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual("Lighthouse Labs", "lIghthouse Labs");
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Lighthouse Labs", "Lighthouse");
-assertEqual(1, 1);
-assertEqual(12345, 12345);
-assertEqual(12345, 123);
-assertEqual(2345, 123);
-assertEqual("1", 1);
-assertEqual(1, "1");
-assertEqual("12345", "12345");
-assertEqual("12345", "123");
-assertEqual("", 123);
-assertEqual(123, "");
-assertEqual("", "");
-assertEqual("", '');
-assertEqual("",);
- */
